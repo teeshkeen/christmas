@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/global.scss">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logotype">
+            <div class="header__logotype-icon">
+              <img src="./src/assets/icons/logo-header.svg" alt="Логотип">
+            </div>
+            <div class="header__logotype-text">
+              Christmas
+            </div>
+          </div>
+          <div class="header__navigation">
+            <ul class="header__navigation-list header__navigation-list--hidden">
+              <li class="header__navigation-item">Home</li>
+              <li class="header__navigation-item">Celebrate</li>
+              <li class="header__navigation-item">Gifts</li>
+              <li class="header__navigation-item">New</li>
+            </ul>
+            <div class="header__theme-toggle">
+              <img src="./src/assets/icons/moon.svg" alt="Переключатель темы">
+            </div>
+            <div class="header__menu">
+              <img src="./src/assets/icons/menu.svg" alt="Мобильное меню">
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="home">
+          <div class="home__container">
+            <div class="home__image">
+              <img src="./src/assets/images/home.svg" alt="Домашняя картинка">
+            </div>
+            <div class="home__content">
+              <div class="home__title">
+                Merry Christmas and Happy New Year!
+              </div>
+              <div class="home__text">
+                Christmas and a new year is about to begin, all good wishes and successes.
+              </div>
+              <div class="home__button">
+                <button class="button-primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="giving">
+          <div class="giving__container">
+            <div class="giving__title">
+              Start Giving This <br> Christmas
+            </div>
+            <div class="giving__list">
+              <div class="giving__item">
+                <img src="./src/assets/images/give1.svg" alt="Подарок" class="giving__item-icon">
+                <span class="giving__item-title">Surprise gifts</span>
+                <p class="giving__item-desc">They are the best gifts there is</p>
+              </div>
+              <div class="giving__item">
+                <img src="./src/assets/images/give2.svg" alt="Подарок" class="giving__item-icon">
+                <span class="giving__item-title">Ornaments</span>
+                <p class="giving__item-desc">Give a moment to decorate.</p>
+              </div>
+              <div class="giving__item">
+                <img src="./src/assets/images/give3.svg" alt="Подарок" class="giving__item-icon">
+                <span class="giving__item-title">Lots of love</span>
+                <p class="giving__item-desc">Give away feelings that last forever</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="mobile-menu mobile-menu--hidden">
+        <div class="mobile-menu__container">
+          <div class="mobile-menu__close">
+            <img src="./src/assets/icons/close.svg" alt="Закрыть мобильное меню">
+          </div>
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__nav-list">
+              <li class="mobile-menu__nav-item">Home</li>
+              <li class="mobile-menu__nav-item">Celebrate</li>
+              <li class="mobile-menu__nav-item">Gifts</li>
+              <li class="mobile-menu__nav-item">New</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

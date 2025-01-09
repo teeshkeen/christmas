@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    font-family: "Poppins", serif;
+    background-color: $light-theme-body;
+}
+
+.button-primary {
+    @include button(white, $light-theme-primary, 20px 64px, $light-theme-secondary, white);
+}

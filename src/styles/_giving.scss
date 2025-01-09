@@ -1,0 +1,66 @@
+@import 'variables';
+@import 'mixins';
+
+.giving {
+
+    &__container {
+        @include container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        padding-top: 48px;
+        padding-bottom: 32px;
+    }
+
+    &__title {
+        font-size: $mobile-fz-large;
+        font-weight: 600;
+
+        text-align: center;
+
+        color: $light-theme-title;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 48px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        width: 40%;
+
+        &-icon {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+
+            margin-bottom: 8px;
+        }
+
+        &-title {
+            font-size: $mobile-fz-medium;
+            font-weight: 600;
+
+            color: $light-theme-title;
+
+            margin-bottom: 4px;
+        }
+
+        &-desc {
+            font-size: $mobile-fz-small;
+            font-weight: 400;
+
+            color: $light-theme-text;
+        }
+    }
+}
