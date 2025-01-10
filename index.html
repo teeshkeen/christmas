@@ -1,100 +1,401 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="./src/global.scss">
-  </head>
-  <body>
-    <div id="app">
-      <header class="header">
-        <div class="header__container">
-          <div class="header__logotype">
-            <div class="header__logotype-icon">
-              <img src="./src/assets/icons/logo-header.svg" alt="Логотип">
-            </div>
-            <div class="header__logotype-text">
-              Christmas
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/global.scss">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logotype">
+          <div class="header__logotype-icon">
+            <img src="./src/assets/icons/logo-header.svg" alt="Логотип">
           </div>
-          <div class="header__navigation">
-            <ul class="header__navigation-list header__navigation-list--hidden">
-              <li class="header__navigation-item">Home</li>
-              <li class="header__navigation-item">Celebrate</li>
-              <li class="header__navigation-item">Gifts</li>
-              <li class="header__navigation-item">New</li>
-            </ul>
-            <div class="header__theme-toggle">
-              <img src="./src/assets/icons/moon.svg" alt="Переключатель темы">
-            </div>
-            <div class="header__menu">
-              <img src="./src/assets/icons/menu.svg" alt="Мобильное меню">
-            </div>
+          <div class="header__logotype-text">
+            Christmas
           </div>
         </div>
-      </header>
-      <main class="main">
-        <section class="home">
-          <div class="home__container">
-            <div class="home__image">
-              <img src="./src/assets/images/home.svg" alt="Домашняя картинка">
-            </div>
-            <div class="home__content">
-              <div class="home__title">
-                Merry Christmas and Happy New Year!
-              </div>
-              <div class="home__text">
-                Christmas and a new year is about to begin, all good wishes and successes.
-              </div>
-              <div class="home__button">
-                <button class="button-primary">Get Started</button>
-              </div>
-            </div>
+        <div class="header__navigation">
+          <ul class="header__navigation-list header__navigation-list--hidden">
+            <li class="header__navigation-item">Home</li>
+            <li class="header__navigation-item">Celebrate</li>
+            <li class="header__navigation-item">Gifts</li>
+            <li class="header__navigation-item">New</li>
+          </ul>
+          <div class="header__theme-toggle">
+            <img role="toggle-theme" src="./src/assets/icons/moon.svg" alt="Переключатель темы">
           </div>
-        </section>
-        <section class="giving">
-          <div class="giving__container">
-            <div class="giving__title">
-              Start Giving This <br> Christmas
-            </div>
-            <div class="giving__list">
-              <div class="giving__item">
-                <img src="./src/assets/images/give1.svg" alt="Подарок" class="giving__item-icon">
-                <span class="giving__item-title">Surprise gifts</span>
-                <p class="giving__item-desc">They are the best gifts there is</p>
-              </div>
-              <div class="giving__item">
-                <img src="./src/assets/images/give2.svg" alt="Подарок" class="giving__item-icon">
-                <span class="giving__item-title">Ornaments</span>
-                <p class="giving__item-desc">Give a moment to decorate.</p>
-              </div>
-              <div class="giving__item">
-                <img src="./src/assets/images/give3.svg" alt="Подарок" class="giving__item-icon">
-                <span class="giving__item-title">Lots of love</span>
-                <p class="giving__item-desc">Give away feelings that last forever</p>
-              </div>
-            </div>
+          <div class="header__menu">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.33333 2.5H3.33333C3.11232 2.5 2.90036 2.5878 2.74408 2.74408C2.5878 2.90036 2.5 3.11232 2.5 3.33333V8.33333C2.5 8.55435 2.5878 8.76631 2.74408 8.92259C2.90036 9.07887 3.11232 9.16667 3.33333 9.16667H8.33333C8.55435 9.16667 8.76631 9.07887 8.92259 8.92259C9.07887 8.76631 9.16667 8.55435 9.16667 8.33333V3.33333C9.16667 3.11232 9.07887 2.90036 8.92259 2.74408C8.76631 2.5878 8.55435 2.5 8.33333 2.5ZM7.5 7.5H4.16667V4.16667H7.5V7.5ZM11.6667 9.16667H16.6667C16.8877 9.16667 17.0996 9.07887 17.2559 8.92259C17.4122 8.76631 17.5 8.55435 17.5 8.33333V3.33333C17.5 3.11232 17.4122 2.90036 17.2559 2.74408C17.0996 2.5878 16.8877 2.5 16.6667 2.5H11.6667C11.4457 2.5 11.2337 2.5878 11.0774 2.74408C10.9211 2.90036 10.8333 3.11232 10.8333 3.33333V8.33333C10.8333 8.55435 10.9211 8.76631 11.0774 8.92259C11.2337 9.07887 11.4457 9.16667 11.6667 9.16667ZM12.5 4.16667H15.8333V7.5H12.5V4.16667ZM2.5 16.6667C2.5 16.8877 2.5878 17.0996 2.74408 17.2559C2.90036 17.4122 3.11232 17.5 3.33333 17.5H8.33333C8.55435 17.5 8.76631 17.4122 8.92259 17.2559C9.07887 17.0996 9.16667 16.8877 9.16667 16.6667V11.6667C9.16667 11.4457 9.07887 11.2337 8.92259 11.0774C8.76631 10.9211 8.55435 10.8333 8.33333 10.8333H3.33333C3.11232 10.8333 2.90036 10.9211 2.74408 11.0774C2.5878 11.2337 2.5 11.4457 2.5 11.6667V16.6667ZM4.16667 12.5H7.5V15.8333H4.16667V12.5ZM10.8333 16.6667C10.8333 16.8877 10.9211 17.0996 11.0774 17.2559C11.2337 17.4122 11.4457 17.5 11.6667 17.5H16.6667C16.8877 17.5 17.0996 17.4122 17.2559 17.2559C17.4122 17.0996 17.5 16.8877 17.5 16.6667V11.6667C17.5 11.4457 17.4122 11.2337 17.2559 11.0774C17.0996 10.9211 16.8877 10.8333 16.6667 10.8333H11.6667C11.4457 10.8333 11.2337 10.9211 11.0774 11.0774C10.9211 11.2337 10.8333 11.4457 10.8333 11.6667V16.6667ZM12.5 12.5H15.8333V15.8333H12.5V12.5Z"
+                fill="#282525" />
+            </svg>
           </div>
-        </section>
-      </main>
-      <div class="mobile-menu mobile-menu--hidden">
-        <div class="mobile-menu__container">
-          <div class="mobile-menu__close">
-            <img src="./src/assets/icons/close.svg" alt="Закрыть мобильное меню">
-          </div>
-          <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__nav-list">
-              <li class="mobile-menu__nav-item">Home</li>
-              <li class="mobile-menu__nav-item">Celebrate</li>
-              <li class="mobile-menu__nav-item">Gifts</li>
-              <li class="mobile-menu__nav-item">New</li>
-            </ul>
-          </nav>
         </div>
       </div>
+    </header>
+    <main class="main">
+      <section class="home">
+        <div class="home__container">
+          <div class="home__image">
+            <img src="./src/assets/images/home.svg" alt="Домашняя картинка">
+          </div>
+          <div class="home__content">
+            <div class="home__title">
+              Merry Christmas and Happy New Year!
+            </div>
+            <div class="home__text">
+              Christmas and a new year is about to begin, all good wishes and successes.
+            </div>
+            <div class="home__button">
+              <button class="button-primary">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="giving">
+        <div class="giving__container">
+          <div class="giving__title">
+            Start Giving This <br> Christmas
+          </div>
+          <div class="giving__list">
+            <div class="giving__item">
+              <img src="./src/assets/images/give1.svg" alt="Подарок" class="giving__item-icon">
+              <span class="giving__item-title">Surprise gifts</span>
+              <p class="giving__item-desc">They are the best gifts there is</p>
+            </div>
+            <div class="giving__item">
+              <img src="./src/assets/images/give2.svg" alt="Подарок" class="giving__item-icon">
+              <span class="giving__item-title">Ornaments</span>
+              <p class="giving__item-desc">Give a moment to decorate.</p>
+            </div>
+            <div class="giving__item">
+              <img src="./src/assets/images/give3.svg" alt="Подарок" class="giving__item-icon">
+              <span class="giving__item-title">Lots of love</span>
+              <p class="giving__item-desc">Give away feelings that last forever</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="celebrate">
+        <div class="celebrate__container">
+          <div class="celebrate__content">
+            <div class="celebrate__title">Celebrate With A <br>
+              Lot Of Love
+            </div>
+            <div class="celebrate__text">In this holidays, celebrate with much love and peace, offering many blessings
+              to our loved ones, friends and neighbors, wishing them a good Christmas message.</div>
+            <div class="celebrate__button">
+              <button class="button-primary">Send Good Wishes</button>
+            </div>
+          </div>
+          <div class="celebrate__image">
+            <img src="./src/assets/images/celebrate.svg" alt="Домашняя картинка">
+          </div>
+        </div>
+      </section>
+      <section class="gift">
+        <div class="gift__container">
+          <div class="gift__title">Share A Gift</div>
+          <div class="gift__cards">
+            <div class="gift__card">
+              <div class="gift__card-like">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                    fill="#DC3845" />
+                </svg>
+              </div>
+              <div class="gift__card-image">
+                <img src="./src/assets/images/gift1.svg" alt="Картинка товара">
+              </div>
+              <div class="gift__card-text">
+                <div class="gift__card-text-cost">
+                  <span class="gift__card-text-cost-value">15$</span>
+                </div>
+                <div class="gift__card-text-name">
+                  <span class="gift__card-text-name-value">Gift Name</span>
+                </div>
+              </div>
+            </div>
+            <div class="gift__card">
+              <div class="gift__card-like">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                    fill="#DC3845" />
+                </svg>
+              </div>
+              <div class="gift__card-image">
+                <img src="./src/assets/images/gift1.svg" alt="Картинка товара">
+              </div>
+              <div class="gift__card-text">
+                <div class="gift__card-text-cost">
+                  <span class="gift__card-text-cost-value">15$</span>
+                </div>
+                <div class="gift__card-text-name">
+                  <span class="gift__card-text-name-value">Gift Name</span>
+                </div>
+              </div>
+            </div>
+            <div class="gift__card">
+              <div class="gift__card-like">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                    fill="#DC3845" />
+                </svg>
+              </div>
+              <div class="gift__card-image">
+                <img src="./src/assets/images/gift1.svg" alt="Картинка товара">
+              </div>
+              <div class="gift__card-text">
+                <div class="gift__card-text-cost">
+                  <span class="gift__card-text-cost-value">15$</span>
+                </div>
+                <div class="gift__card-text-name">
+                  <span class="gift__card-text-name-value">Gift Name</span>
+                </div>
+              </div>
+            </div>
+            <div class="gift__card">
+              <div class="gift__card-like">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                    fill="#DC3845" />
+                </svg>
+              </div>
+              <div class="gift__card-image">
+                <img src="./src/assets/images/gift1.svg" alt="Картинка товара">
+              </div>
+              <div class="gift__card-text">
+                <div class="gift__card-text-cost">
+                  <span class="gift__card-text-cost-value">15$</span>
+                </div>
+                <div class="gift__card-text-name">
+                  <span class="gift__card-text-name-value">Gift Name</span>
+                </div>
+              </div>
+            </div>
+            <div class="gift__card">
+              <div class="gift__card-like">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                    fill="#DC3845" />
+                </svg>
+              </div>
+              <div class="gift__card-image">
+                <img src="./src/assets/images/gift1.svg" alt="Картинка товара">
+              </div>
+              <div class="gift__card-text">
+                <div class="gift__card-text-cost">
+                  <span class="gift__card-text-cost-value">15$</span>
+                </div>
+                <div class="gift__card-text-name">
+                  <span class="gift__card-text-name-value">Gift Name</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new-gifts">
+        <div class="new-gifts__container">
+          <div class="new-gifts__title">New Gifts</div>
+          <div class="new-gifts__swiper">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="new-gifts__card">
+                    <div class="new-gifts__card-ellipse">
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
+                      </svg>                        
+                    </div>
+                    <div class="new-gifts__card-image">
+                      <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
+                    </div>
+                    <div class="new-gifts__card-text">
+                      <div class="new-gift_card-text-cost">
+                        <span class="new-gifts__card-text-cost-value">95$</span>
+                      </div>
+                      <div class="new-gifts_card-text-name">
+                        <span class="new-gifts__card-text-name-value">Gift Name</span>
+                      </div>
+                    </div>
+                    <div class="new-gifts__card-like">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                          fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="new-gifts__card">
+                    <div class="new-gifts__card-ellipse">
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
+                      </svg>                        
+                    </div>
+                    <div class="new-gifts__card-image">
+                      <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
+                    </div>
+                    <div class="new-gifts__card-text">
+                      <div class="new-gift_card-text-cost">
+                        <span class="new-gifts__card-text-cost-value">95$</span>
+                      </div>
+                      <div class="new-gifts_card-text-name">
+                        <span class="new-gifts__card-text-name-value">Gift Name</span>
+                      </div>
+                    </div>
+                    <div class="new-gifts__card-like">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                          fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="new-gifts__card">
+                    <div class="new-gifts__card-ellipse">
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
+                      </svg>                        
+                    </div>
+                    <div class="new-gifts__card-image">
+                      <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
+                    </div>
+                    <div class="new-gifts__card-text">
+                      <div class="new-gift_card-text-cost">
+                        <span class="new-gifts__card-text-cost-value">95$</span>
+                      </div>
+                      <div class="new-gifts_card-text-name">
+                        <span class="new-gifts__card-text-name-value">Gift Name</span>
+                      </div>
+                    </div>
+                    <div class="new-gifts__card-like">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                          fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="new-gifts__card">
+                    <div class="new-gifts__card-ellipse">
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
+                      </svg>                        
+                    </div>
+                    <div class="new-gifts__card-image">
+                      <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
+                    </div>
+                    <div class="new-gifts__card-text">
+                      <div class="new-gift_card-text-cost">
+                        <span class="new-gifts__card-text-cost-value">95$</span>
+                      </div>
+                      <div class="new-gifts_card-text-name">
+                        <span class="new-gifts__card-text-name-value">Gift Name</span>
+                      </div>
+                    </div>
+                    <div class="new-gifts__card-like">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                          fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="new-gifts__card">
+                    <div class="new-gifts__card-ellipse">
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
+                      </svg>                        
+                    </div>
+                    <div class="new-gifts__card-image">
+                      <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
+                    </div>
+                    <div class="new-gifts__card-text">
+                      <div class="new-gift_card-text-cost">
+                        <span class="new-gifts__card-text-cost-value">95$</span>
+                      </div>
+                      <div class="new-gifts_card-text-name">
+                        <span class="new-gifts__card-text-name-value">Gift Name</span>
+                      </div>
+                    </div>
+                    <div class="new-gifts__card-like">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 3.82922C9.09203 2.9943 7.90353 2.53092 6.67002 2.53088C6.01714 2.53156 5.37084 2.66135 4.76831 2.91277C4.16577 3.1642 3.61891 3.5323 3.15919 3.99588C1.19836 5.96505 1.19919 9.04505 3.16086 11.0059L9.27086 17.1159C9.41252 17.3651 9.68586 17.5259 10 17.5259C10.129 17.5246 10.2559 17.4931 10.3706 17.4339C10.4852 17.3748 10.5843 17.2895 10.66 17.1851L16.8392 11.0059C18.8009 9.04422 18.8009 5.96505 16.8375 3.99255C16.378 3.52981 15.8316 3.16246 15.2297 2.91162C14.6277 2.66078 13.9821 2.53138 13.33 2.53088C12.0965 2.53109 10.9081 2.99444 10 3.82922ZM15.6592 5.17088C16.9617 6.48005 16.9625 8.52505 15.6609 9.82755L10 15.4884L4.33919 9.82755C3.03752 8.52505 3.03836 6.48005 4.33752 5.17422C4.97086 4.54422 5.79919 4.19755 6.67002 4.19755C7.54086 4.19755 8.36586 4.54422 8.99419 5.17255L9.41086 5.58922C9.48818 5.66667 9.58002 5.72812 9.68111 5.77005C9.78221 5.81197 9.89058 5.83355 10 5.83355C10.1095 5.83355 10.2178 5.81197 10.3189 5.77005C10.42 5.72812 10.5119 5.66667 10.5892 5.58922L11.0059 5.17255C12.2659 3.91505 14.4009 3.91838 15.6592 5.17088Z"
+                          fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="mobile-menu mobile-menu--hidden">
+      <div class="mobile-menu__container">
+        <div class="mobile-menu__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.192 6.34399L11.949 10.586L7.707 6.34399L6.293 7.75799L10.535 12L6.293 16.242L7.707 17.656L11.949 13.414L16.192 17.656L17.606 16.242L13.364 12L17.606 7.75799L16.192 6.34399Z"
+              fill="#282525" />
+          </svg>
+        </div>
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__nav-list">
+            <li class="mobile-menu__nav-item">Home</li>
+            <li class="mobile-menu__nav-item">Celebrate</li>
+            <li class="mobile-menu__nav-item">Gifts</li>
+            <li class="mobile-menu__nav-item">New</li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 24,
+      loop: true,
+      slidesOffsetBefore: 0, // Смещение перед первым слайдом
+      slidesOffsetAfter: 0, // Смещение после последнего слайда
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+    });
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

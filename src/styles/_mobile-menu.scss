@@ -7,7 +7,7 @@
     left: 0;
     width: 100vw;
 
-    background-color: white;
+    background-color: var(--container-color);
 
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
@@ -27,9 +27,8 @@
 
         margin-bottom: 22px;
 
-        img {
-            width: 24px;
-            height: 24px;
+        svg path {
+            fill: var(--title-color);
         }
     }
 
@@ -46,7 +45,7 @@
 
         &-item {
             font-size: $mobile-fz-normal;
-            color: $light-theme-title;
+            color: var(--title-color);
             font-weight: 500;
         }
     }

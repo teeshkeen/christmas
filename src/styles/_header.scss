@@ -27,7 +27,7 @@
         
         &-text {
             font-size: $mobile-fz-normal;
-            color: $light-theme-title;
+            color: var(--title-color);
             font-weight: 500;
         }
     }
@@ -46,11 +46,17 @@
     &__theme-toggle {
         width: 20px;
         height: 20px;
+
+        color: var(--title-color);
+
     }
 
     &__menu {
         width: 20px;
         height: 20px;
 
+        svg path {
+            fill: var(--title-color);
+        }
     }
 }

@@ -20,7 +20,7 @@
 
         text-align: center;
 
-        color: $light-theme-title;
+        color: var(--title-color);
     }
 
     &__list {
@@ -51,7 +51,7 @@
             font-size: $mobile-fz-medium;
             font-weight: 600;
 
-            color: $light-theme-title;
+            color: var(--title-color);
 
             margin-bottom: 4px;
         }
@@ -60,7 +60,7 @@
             font-size: $mobile-fz-small;
             font-weight: 400;
 
-            color: $light-theme-text;
+            color: var(--text-color);
         }
     }
 }

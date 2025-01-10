@@ -2,6 +2,7 @@
 @import 'mixins';
 
 body {
+    position: relative;
     font-family: "Poppins", serif;
     background-color: $light-theme-body;
 }

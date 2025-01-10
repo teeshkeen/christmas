@@ -14,7 +14,6 @@
     }
 
     &__image {
-
         img {
             width: calc(100% + 8px);
             height: auto;
@@ -33,7 +32,8 @@
         font-size: $mobile-fz-xlarge;
         font-weight: 600;
 
-        color: $light-theme-title;
+        // Заменяем на CSS-переменную
+        color: var(--title-color);
 
         margin-top: 22px;
     }
@@ -42,7 +42,8 @@
         font-size: $mobile-fz-small;
         font-weight: 400;
 
-        color: $light-theme-text;
+        // Заменяем на CSS-переменную
+        color: var(--text-color);
 
         margin-top: 12px;
     }

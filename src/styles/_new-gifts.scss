@@ -1,0 +1,84 @@
+@import 'mixins';
+@import 'variables';
+
+.new-gifts {
+
+    &__container {
+        @include section-space;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        text-align: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: $mobile-fz-large;
+        font-weight: 600;
+
+        color: var(--title-color);
+    }
+
+    &__card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 12px;
+        min-width: 230px;
+        background-color: var(--container-color);
+
+        
+        &-ellipse {
+            position: absolute;
+            top: -15px;
+            z-index: 1;
+        }
+
+        &-image {
+            z-index: 2;
+
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 4px;
+
+            margin-bottom: 24px;
+
+            &-cost-value {
+                font-size: $mobile-fz-large;
+                font-weight: 600;
+
+                color: var(--title-color);
+            }
+
+            &-name-value {
+                font-size: $mobile-fz-normal;
+                font-size: 400;
+
+                color: var(--text-color);
+            }
+        }
+
+        &-like {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 36px;
+            max-height: 36px;
+
+            border-radius: 4px;
+            border-bottom-right-radius: 0px;
+            background-color: $light-theme-primary;
+            svg {
+                padding: 8px;
+            }
+        }
+    }
+}

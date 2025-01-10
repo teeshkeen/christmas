@@ -1,7 +1,6 @@
 @mixin container {
     width: 80%;
     margin: 0 auto;
-    background-color: $light-theme-body;
 }
 
 @mixin button($color, $background-color, $padding, $hover-background-color, $hover-color) {
@@ -9,9 +8,15 @@
     background-color: $background-color;
     padding: $padding;
     border-radius: 64px;
-
+    cursor: pointer;
+    
     &:hover {
         background-color: $hover-background-color;
         color: $hover-color;
     }
+}
+
+@mixin section-space {
+    padding-top: 48px;
+    padding-bottom: 32px;
 }
