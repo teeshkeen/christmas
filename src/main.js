@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeIcon = themeToggleButton.querySelector('img');
   const body = document.body;
 
-  // Проверяем, есть ли сохраненная тема в localStorage
+
   const currentTheme = localStorage.getItem('theme') || 'light';
   if (currentTheme === 'dark') {
       body.classList.add('dark-theme');
