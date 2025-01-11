@@ -2,7 +2,7 @@
 @import 'variables';
 
 .new-gifts {
-
+    overflow: hidden;
     &__container {
         @include section-space;
         display: flex;

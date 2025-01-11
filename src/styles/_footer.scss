@@ -1,0 +1,81 @@
+@import 'mixins';
+@import 'variables';
+
+.footer {
+    position: relative;
+    &__container {
+        @include container;
+        @include section-space;
+
+        @include flex-col;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    &__title {
+        @include flex-col;
+        gap: 16px;
+
+            &-logotype {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            &-icon {
+                img {
+                    width: 24px;
+                    height: 24px;
+
+                }
+            }
+
+            &-text {
+                font-size: $mobile-fz-normal;
+                font-weight: 500;
+
+                color: var(--title-color);
+            }
+        }
+
+        &-text {
+            font-size: $mobile-fz-small;
+            font-weight: 400;
+            color: var(--text-color);
+        }
+    }
+
+    &__list-container {
+        @include flex-col;
+        gap: 16px;
+    }
+
+    &__list {
+        @include flex-col;
+        gap: 12px;
+
+        &-item {
+            font-size: $mobile-fz-normal;
+            font-weight: 400;
+
+            color: var(--text-color);
+        }
+
+        &-title {
+            font-size: $mobile-fz-medium;
+            font-weight: 600;
+
+            color: var(--title-color);
+        }
+    }
+
+    &__bell {
+        position: absolute;
+        top: 150px;
+        right: 50px;
+
+        &:last-child {
+            top: 350px;
+            right: 0px;
+        }
+    }
+}

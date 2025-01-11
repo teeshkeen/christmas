@@ -1,5 +1,5 @@
 @mixin container {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -16,13 +16,18 @@
     }
 }
 
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin section-space {
     padding-top: 48px;
     padding-bottom: 32px;
 }
 
 @mixin card-shadow {
-    -webkit-box-shadow: 0px 8px 16px 9px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 8px 16px 9px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 8px 16px 9px rgba(34, 60, 80, 0.2);
+    -webkit-box-shadow: 0px 8px 16px 9px var(--box-shadow-color);
+    -moz-box-shadow: 0px 8px 16px 9px var(--box-shadow-color);
+    box-shadow: 0px 8px 16px 9px var(--box-shadow-color);
 }

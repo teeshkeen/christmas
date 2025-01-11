@@ -6,12 +6,15 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./src/global.scss">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
-  <div id="app">
+  <div class="page" id="app">
     <header class="header">
       <div class="header__container">
         <div class="header__logotype">
@@ -32,7 +35,7 @@
           <div class="header__theme-toggle">
             <img role="toggle-theme" src="./src/assets/icons/moon.svg" alt="Переключатель темы">
           </div>
-          <div class="header__menu">
+          <div href="#menu" data-fancybox class="header__menu open-menu">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.33333 2.5H3.33333C3.11232 2.5 2.90036 2.5878 2.74408 2.74408C2.5878 2.90036 2.5 3.11232 2.5 3.33333V8.33333C2.5 8.55435 2.5878 8.76631 2.74408 8.92259C2.90036 9.07887 3.11232 9.16667 3.33333 9.16667H8.33333C8.55435 9.16667 8.76631 9.07887 8.92259 8.92259C9.07887 8.76631 9.16667 8.55435 9.16667 8.33333V3.33333C9.16667 3.11232 9.07887 2.90036 8.92259 2.74408C8.76631 2.5878 8.55435 2.5 8.33333 2.5ZM7.5 7.5H4.16667V4.16667H7.5V7.5ZM11.6667 9.16667H16.6667C16.8877 9.16667 17.0996 9.07887 17.2559 8.92259C17.4122 8.76631 17.5 8.55435 17.5 8.33333V3.33333C17.5 3.11232 17.4122 2.90036 17.2559 2.74408C17.0996 2.5878 16.8877 2.5 16.6667 2.5H11.6667C11.4457 2.5 11.2337 2.5878 11.0774 2.74408C10.9211 2.90036 10.8333 3.11232 10.8333 3.33333V8.33333C10.8333 8.55435 10.9211 8.76631 11.0774 8.92259C11.2337 9.07887 11.4457 9.16667 11.6667 9.16667ZM12.5 4.16667H15.8333V7.5H12.5V4.16667ZM2.5 16.6667C2.5 16.8877 2.5878 17.0996 2.74408 17.2559C2.90036 17.4122 3.11232 17.5 3.33333 17.5H8.33333C8.55435 17.5 8.76631 17.4122 8.92259 17.2559C9.07887 17.0996 9.16667 16.8877 9.16667 16.6667V11.6667C9.16667 11.4457 9.07887 11.2337 8.92259 11.0774C8.76631 10.9211 8.55435 10.8333 8.33333 10.8333H3.33333C3.11232 10.8333 2.90036 10.9211 2.74408 11.0774C2.5878 11.2337 2.5 11.4457 2.5 11.6667V16.6667ZM4.16667 12.5H7.5V15.8333H4.16667V12.5ZM10.8333 16.6667C10.8333 16.8877 10.9211 17.0996 11.0774 17.2559C11.2337 17.4122 11.4457 17.5 11.6667 17.5H16.6667C16.8877 17.5 17.0996 17.4122 17.2559 17.2559C17.4122 17.0996 17.5 16.8877 17.5 16.6667V11.6667C17.5 11.4457 17.4122 11.2337 17.2559 11.0774C17.0996 10.9211 16.8877 10.8333 16.6667 10.8333H11.6667C11.4457 10.8333 11.2337 10.9211 11.0774 11.0774C10.9211 11.2337 10.8333 11.4457 10.8333 11.6667V16.6667ZM12.5 12.5H15.8333V15.8333H12.5V12.5Z"
@@ -218,9 +221,10 @@
                 <div class="swiper-slide">
                   <div class="new-gifts__card">
                     <div class="new-gifts__card-ellipse">
-                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
-                      </svg>                        
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845" />
+                      </svg>
                     </div>
                     <div class="new-gifts__card-image">
                       <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
@@ -245,9 +249,10 @@
                 <div class="swiper-slide">
                   <div class="new-gifts__card">
                     <div class="new-gifts__card-ellipse">
-                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
-                      </svg>                        
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845" />
+                      </svg>
                     </div>
                     <div class="new-gifts__card-image">
                       <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
@@ -272,9 +277,10 @@
                 <div class="swiper-slide">
                   <div class="new-gifts__card">
                     <div class="new-gifts__card-ellipse">
-                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
-                      </svg>                        
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845" />
+                      </svg>
                     </div>
                     <div class="new-gifts__card-image">
                       <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
@@ -299,9 +305,10 @@
                 <div class="swiper-slide">
                   <div class="new-gifts__card">
                     <div class="new-gifts__card-ellipse">
-                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
-                      </svg>                        
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845" />
+                      </svg>
                     </div>
                     <div class="new-gifts__card-image">
                       <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
@@ -326,9 +333,10 @@
                 <div class="swiper-slide">
                   <div class="new-gifts__card">
                     <div class="new-gifts__card-ellipse">
-                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="115" cy="55" r="125" fill="#DC3845"/>
-                      </svg>                        
+                      <svg width="230" height="180" viewBox="0 0 230 180" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="115" cy="55" r="125" fill="#DC3845" />
+                      </svg>
                     </div>
                     <div class="new-gifts__card-image">
                       <img src="./src/assets/images/newGift.svg" alt="Картинка нового подарка">
@@ -356,16 +364,89 @@
           </div>
         </div>
       </section>
+      <section class="message">
+        <div class="message__container">
+          <div class="message__content">
+            <div class="message__form">
+              <div class="message__form-title">Send Good <br>
+                Wishes!
+              </div>
+              <div class="message__form-input">
+                <input type="text" placeholder="Write your message">
+              </div>
+              <div class="message__form-button">
+                <button class="button-secondary">Send Message</button>
+              </div>
+            </div>
+            <div class="message__image">
+              <img src="./src/assets/images/letterImage.png" alt="Картинка письма">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <div class="mobile-menu mobile-menu--hidden">
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__title">
+          <div class="footer__title-logotype">
+            <div class="footer__title-logotype-icon">
+              <img src="./src/assets/icons/logo-header.svg" alt="Логотип">
+            </div>
+            <div class="footer__title-logotype-text">
+              Christmas
+            </div>
+          </div>
+          <div class="footer__title-text">This Christmas give <br> a lot of love</div>
+        </div>
+        <div class="footer__services">
+          <div class="footer__list-container">
+            <div class="footer__list-title">Our Services</div>
+            <ul class="footer__list">
+              <li class="footer__list-item">Pricing</li>
+              <li class="footer__list-item">Discounts</li>
+              <li class="footer__list-item">Shipping mode</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__support">
+          <div class="footer__list-container">
+            <div class="footer__list-title">Support</div>
+            <ul class="footer__list">
+              <li class="footer__list-item">FAQs</li>
+              <li class="footer__list-item">Support center</li>
+              <li class="footer__list-item">Contact Us</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__available">
+          <div class="footer__list-container">
+            <div class="footer__list-title">Available On</div>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <img src="./src/assets/images/aviable1.svg" alt="Поддерживаемое устройство">
+              </li>
+              <li class="footer__available-list-item">
+                <img src="./src/assets/images/aviable2.svg" alt="Поддерживаемое устройство">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img class="footer__bell" src="./src/assets/images/bells1.svg" alt="Звонок">
+      <img class="footer__bell" src="./src/assets/images/bells2.svg" alt="Звонок">
+    </footer>
+    <div id="menu" class="mobile-menu mobile-menu--hidden">
+      <div class="mobile-menu__decor">
+        <img src="./src/assets/images/decor.svg" alt="Декорация">
+      </div>
       <div class="mobile-menu__container">
-        <div class="mobile-menu__close">
+        <!-- <div data-fancybox-close class="mobile-menu__close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16.192 6.34399L11.949 10.586L7.707 6.34399L6.293 7.75799L10.535 12L6.293 16.242L7.707 17.656L11.949 13.414L16.192 17.656L17.606 16.242L13.364 12L17.606 7.75799L16.192 6.34399Z"
               fill="#282525" />
           </svg>
-        </div>
+        </div> -->
         <nav class="mobile-menu__nav">
           <ul class="mobile-menu__nav-list">
             <li class="mobile-menu__nav-item">Home</li>
@@ -387,15 +468,24 @@
       centeredSlides: true,
       spaceBetween: 24,
       loop: true,
-      slidesOffsetBefore: 0, // Смещение перед первым слайдом
-      slidesOffsetAfter: 0, // Смещение после последнего слайда
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
       pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
       },
     });
+
+    $(document).ready(function () {
+      $('[data-fancybox]').fancybox({
+        closeButton: false,
+      });
+
+      $('.mobile__menu-close').on('click', function () {
+        $.fancybox.close();
+      });
+    });
   </script>
   <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>

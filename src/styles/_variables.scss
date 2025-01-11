@@ -6,6 +6,7 @@ $light-theme-secondary: rgba(212, 43, 57, 1);
 $light-theme-title: rgba(40, 37, 37, 1);
 $light-theme-text: rgba(93, 86, 86, 1);
 $light-theme-text-alt: rgba(145, 136, 137, 1);
+$light-theme-shadow: rgba(34, 60, 80, 0.2);
 
 // Dark theme colors
 $dark-theme-body: rgba(37, 24, 25, 1);
@@ -15,6 +16,7 @@ $dark-theme-secondary: rgba(212, 43, 57, 1);
 $dark-theme-title: rgba(243, 242, 242, 1);
 $dark-theme-text: rgba(194, 189, 189, 1);
 $dark-theme-text-alt: rgba(145, 136, 137, 1);
+$dark-theme-shadow: rgba(0, 0, 0, 0.2);
 
 // Define CSS variables
 :root {
@@ -25,12 +27,7 @@ $dark-theme-text-alt: rgba(145, 136, 137, 1);
     --title-color: #{$light-theme-title};
     --text-color: #{$light-theme-text};
     --text-alt-color: #{$light-theme-text-alt};
-}
-
-body {
-    background-color: var(--body-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    --box-shadow-color: #{$light-theme-shadow};
 }
 
 // Dark theme styles
@@ -42,10 +39,11 @@ body.dark-theme {
     --title-color: #{$dark-theme-title};
     --text-color: #{$dark-theme-text};
     --text-alt-color: #{$dark-theme-text-alt};
+    --box-shadow-color: #{$dark-theme-shadow};
+
 }
 
 // font sizes desktop
-
 $desktop-fz-smaller: 13px;
 $desktop-fz-small: 14px;
 $desktop-fz-normal: 16px;
@@ -54,7 +52,6 @@ $desktop-fz-large: 24px;
 $desktop-fz-xlarge: 36px;
 
 // font sizes mobile
-
 $mobile-fz-smaller: 12px;
 $mobile-fz-small: 13px;
 $mobile-fz-normal: 15px;

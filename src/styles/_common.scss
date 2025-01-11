@@ -5,8 +5,19 @@ body {
     position: relative;
     font-family: "Poppins", serif;
     background-color: $light-theme-body;
+    overflow-x: hidden;
 }
 
 .button-primary {
     @include button(white, $light-theme-primary, 20px 64px, $light-theme-secondary, white);
+}
+
+.button-secondary {
+    @include button(white, $light-theme-title, 20px 64px, $light-theme-text, white);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
