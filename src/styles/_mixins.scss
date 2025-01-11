@@ -1,6 +1,13 @@
+@import 'variables';
+
 @mixin container {
     max-width: 80%;
+    // max-width: calc(100% - 312px);
     margin: 0 auto;
+
+    @include respond-to(desktop) {
+        max-width: 968px;
+    }
 }
 
 @mixin button($color, $background-color, $padding, $hover-background-color, $hover-color) {
@@ -21,6 +28,16 @@
     flex-direction: column;
 }
 
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin align-center {
+    align-items: center;
+    text-align: center;
+}
+
 @mixin section-space {
     padding-top: 48px;
     padding-bottom: 32px;
@@ -30,4 +47,46 @@
     -webkit-box-shadow: 0px 8px 16px 9px var(--box-shadow-color);
     -moz-box-shadow: 0px 8px 16px 9px var(--box-shadow-color);
     box-shadow: 0px 8px 16px 9px var(--box-shadow-color);
+}
+
+@mixin respond-to($screen) {
+    @if ($screen == medium) {
+        @media (min-width: 575px) {
+            @content;
+        }
+    } @else if ($screen == large) {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } @else if ($screen == x-large) {
+        @media (min-width: 968px) {
+            @content;
+        }
+    } @else if ($screen == xx-large) {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+@mixin font-size($size) {
+    font-size: map-get((
+        smaller: $mobile-fz-smaller,
+        small: $mobile-fz-small,
+        normal: $mobile-fz-normal,
+        medium: $mobile-fz-medium,
+        large: $mobile-fz-large,
+        xlarge: $mobile-fz-xlarge
+    ), $size);
+
+    @include respond-to (medium) {
+        font-size: map-get((
+            smaller: $desktop-fz-smaller,
+            small: $desktop-fz-small,
+            normal: $desktop-fz-normal,
+            medium: $desktop-fz-medium,
+            large: $desktop-fz-large,
+            xlarge: $desktop-fz-xlarge
+        ), $size);
+    }
 }

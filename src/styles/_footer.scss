@@ -10,6 +10,11 @@
         @include flex-col;
         align-items: flex-start;
         gap: 32px;
+
+        @include respond-to(x-large) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__title {
@@ -58,6 +63,12 @@
             font-weight: 400;
 
             color: var(--text-color);
+
+            cursor: pointer;
+
+            &:hover {
+                color: var(--primary-color);
+            }
         }
 
         &-title {
@@ -76,6 +87,10 @@
         &:last-child {
             top: 350px;
             right: 0px;
+        }
+
+        @include respond-to(x-large) {
+            display: none;
         }
     }
 }

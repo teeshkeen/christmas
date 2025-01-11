@@ -5,15 +5,13 @@
     overflow: hidden;
     &__container {
         @include section-space;
-        display: flex;
-        flex-direction: column;
+        @include flex-col;
+        @include align-center;
         gap: 48px;
-        text-align: center;
-        align-items: center;
     }
 
     &__title {
-        font-size: $mobile-fz-large;
+        @include font-size(large);
         font-weight: 600;
 
         color: var(--title-color);
@@ -23,8 +21,7 @@
         position: relative;
         overflow: hidden;
 
-        display: flex;
-        flex-direction: column;
+        @include flex-col;
         align-items: center;
 
         min-width: 230px;
@@ -44,26 +41,28 @@
             z-index: 2;
 
             margin-bottom: 30px;
+
+            img {
+                width: 150px;
+            }
         }
 
         &-text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            @include flex-col;
+            @include align-center;
             gap: 4px;
 
             margin-bottom: 24px;
 
             &-cost-value {
-                font-size: $mobile-fz-large;
+                @include font-size(large);
                 font-weight: 600;
 
                 color: var(--title-color);
             }
 
             &-name-value {
-                font-size: $mobile-fz-normal;
+                @include font-size(normal);
                 font-size: 400;
 
                 color: var(--text-color);
@@ -80,6 +79,7 @@
             border-radius: 4px;
             border-bottom-right-radius: 0px;
             background-color: $light-theme-primary;
+            
             svg {
                 padding: 8px;
             }

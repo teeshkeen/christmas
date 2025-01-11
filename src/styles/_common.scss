@@ -6,6 +6,37 @@ body {
     font-family: "Poppins", serif;
     background-color: $light-theme-body;
     overflow-x: hidden;
+
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+
+    cursor: default;
+}
+
+// CSS variables
+:root {
+    --body-color: #{$light-theme-body};
+    --container-color: #{$light-theme-container};
+    --primary-color: #{$light-theme-primary};
+    --secondary-color: #{$light-theme-secondary};
+    --title-color: #{$light-theme-title};
+    --text-color: #{$light-theme-text};
+    --text-alt-color: #{$light-theme-text-alt};
+    --box-shadow-color: #{$light-theme-shadow};
+}
+
+// Dark theme styles
+body.dark-theme {
+    --body-color: #{$dark-theme-body};
+    --container-color: #{$dark-theme-container};
+    --primary-color: #{$dark-theme-primary};
+    --secondary-color: #{$dark-theme-secondary};
+    --title-color: #{$dark-theme-title};
+    --text-color: #{$dark-theme-text};
+    --text-alt-color: #{$dark-theme-text-alt};
+    --box-shadow-color: #{$dark-theme-shadow};
+
 }
 
 .button-primary {
@@ -14,10 +45,4 @@ body {
 
 .button-secondary {
     @include button(white, $light-theme-title, 20px 64px, $light-theme-text, white);
-}
-
-body {
-    background-color: var(--body-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
 }

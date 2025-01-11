@@ -1,33 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const themeToggleButton = document.querySelector('.header__theme-toggle');
-  const themeIcon = themeToggleButton.querySelector('img');
-  const body = document.body;
+import { updateSlides } from './js/updateSlides.js';
+
+updateSlides();
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 24,
+  loop: true,
+  slidesOffsetBefore: 0,
+  slidesOffsetAfter: 0,
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+});
 
 
-  const currentTheme = localStorage.getItem('theme') || 'light';
-  if (currentTheme === 'dark') {
-      body.classList.add('dark-theme');
-  }
+$(document).ready(function () {
+  $('[data-fancybox]').fancybox({
+    closeButton: false,
+  });
 
-  if (body.classList.contains('dark-theme')) {
-    themeIcon.src = './src/assets/icons/sun.svg';
-  } else {
-    themeIcon.src = './src/assets/icons/moon.svg';
-  }
-
-  themeToggleButton.addEventListener('click', () => {
-      body.classList.toggle('dark-theme');
-
-      if (body.classList.contains('dark-theme')) {
-        themeIcon.src = './src/assets/icons/sun.svg';
-      } else {
-        themeIcon.src = './src/assets/icons/moon.svg';
-      }
-
-      if (body.classList.contains('dark-theme')) {
-          localStorage.setItem('theme', 'dark');
-      } else {
-          localStorage.setItem('theme', 'light');
-      }
+  $('.mobile__menu-close').on('click', function () {
+    $.fancybox.close();
   });
 });

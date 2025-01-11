@@ -9,26 +9,35 @@
     }
     
     &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        @include flex-col;
+        @include align-center;
         gap: 35px;
 
         padding: 40px 24px;
         background-color: var(--primary-color);
         border-radius: 20px;
+
+        @include respond-to(x-large) {
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            border-radius: 32px
+        }
     }
 
     &__form {
 
         &-title {
-            font-size: $mobile-fz-large;
+            @include font-size(large);
             font-weight: 600;
 
             color: white;
 
             margin-bottom: 24px;
+
+            @include respond-to(x-large) {
+                text-align: left;
+            }
         }
 
         &-input {
@@ -52,6 +61,10 @@
         img {
             max-width: 200px;
             transform: rotate3d(1, 1, 4, 15deg);
+
+            @include respond-to(x-large) {
+                max-width: 350px;
+            }
         }
     }
 }

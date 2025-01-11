@@ -7,15 +7,14 @@
         @include container;
         @include section-space;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        @include flex-col;
+        @include align-center;
+
         gap: 48px;
     }
 
     &__title {
-        font-size: $mobile-fz-large;
+        @include font-size(large);
         font-weight: 600;
 
         color: var(--title-color);
@@ -23,43 +22,44 @@
 
     &__cards {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 25px;
     }
 
     &__card {
         position: relative;
 
-        display: flex;
-        flex-direction: column;
+        @include flex-col;
         align-items: flex-start;
         gap: 4px;
 
         background-color: var(--container-color);
         @include card-shadow;
 
-        width: calc(50% - 60px);
+        width: calc(50% - 61px);
 
         border-radius: 12px;
         padding: 24px;
 
+        @include respond-to(medium) {
+            width: calc(33% - 64px);
+        }
+
         &-text {
-            display: flex;
-            flex-direction: column;
+            @include flex-col;
             gap: 4px;
 
             text-align: left;
 
             &-cost {
-                font-size: $mobile-fz-medium;
+                @include font-size(meduim);
                 font-weight: 600;
 
                 color: var(--title-color);
             }
 
             &-name {
-                font-size: $mobile-fz-small;
+                @include font-size(small);
                 font-weight: 400;
 
                 color: var(--text-color);
